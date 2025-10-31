@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "src",
+    "composite": true,
+    "declaration": true
+  },
+  "references": [
+    {
+      "path": "../models/tsconfig.build.json"
+    }
+  ],
+  "include": ["src"]
+}

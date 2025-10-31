@@ -1,0 +1,35 @@
+{
+  "name": "pnpm-monorepo-template",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "pnpm --color run -r build",
+    "test": "pnpm --color run -r test",
+    "lint": "pnpm --color run -r lint",
+    "dev": "concurrently -n \"Server,Client\" -c \"yellow,blue\" \"pnpm --filter=server run dev\" \"pnpm --filter=frontend run dev\"",
+    "format": "prettier --write packages/*/{src,tests}/**/*.ts packages/*/{tailwind.config.js,postcss.config.cjs,vite.config.ts,svelte.config.js}",
+    "check": "pnpm --color run -r check"
+  },
+  "keywords": [],
+  "author": "fepu08",
+  "license": "MIT",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "@vitest/coverage-v8": "^4.0.2",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.38.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.4.0",
+    "jiti": "^2.6.1",
+    "knip": "^5.66.2",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "syncpack": "^13.0.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
+    "vite": "^7.1.12",
+    "vitest": "^4.0.1"
+  }
+}

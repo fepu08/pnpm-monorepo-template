@@ -1,0 +1,22 @@
+{
+  "name": "@pnpm-monorepo-template/models",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch --preserveWatchOutput",
+    "lint": "eslint .",
+    "format": "prettier --write src/**/*.{ts,svelte} tests/**/*.ts {tailwind.config.js,postcss.config.cjs,vite.config.ts,svelte.config.js,eslint.config.mts}"
+  },
+  "keywords": [],
+  "author": "fepu08",
+  "license": "MIT",
+  "packageManager": "pnpm@10.14.0"
+}
